@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godot Property Example</title>
+    <link rel="stylesheet" href="../global.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Godot Property Example</h1>
+    </header>
+
+    <main>
+        <article>
+            <p>In Godot 4.3, there are two ways to make a property. Here's an example within a tool that adds a streamlined inspector value to override all margins at once:</p>
+            <p><img src="../Media/godot_property_example.webp"></p>
+            <p>Here it is written code as well:</p>
+            <pre><code>
+                @tool    # If the tool is not working in Editor, try soft reloading tool script (Ctrl+Alt+R, by default)
+                extends MarginContainer
+                # This class streamlines margin adjustments with a custom property
+                
+                const _MARGINS = ["margin_bottom", "margin_left", "margin_right", "margin_top"]
+                
+                # EXAMPLE 1 (requires a secondary variable in order to store the value)
+                var _all_margins: int = 0
+                @export
+                var All_margins: int:
+                    get():
+                        return _all_margins
+                    set(new_margin):
+                        _all_margins = new_margin
+                        for m in _MARGINS:
+                            add_theme_constant_override(m, All_margins)
+                
+                # EXAMPLE 2 (no secondary variable needed, but the value is discarded after 'set' executes)
+                @export
+                var All_margins_2: int:
+                    set(new_margin):
+                        All_margins_2 = new_margin
+                        for m in _MARGINS:
+                            add_theme_constant_override(m, All_margins_2)
+                </code></pre>
+        </article>
+    </main>
+
+    <footer>
+        <p>2024 Astrobeef</p>
+    </footer>
+</body>
+
+</html>

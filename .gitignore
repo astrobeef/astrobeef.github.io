@@ -1,1 +1,4 @@
 *.md
+.obsidian
+*.css
+template.html

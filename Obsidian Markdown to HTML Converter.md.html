@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Obsidian Markdown to HTML Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="obsidian-style.css">
+</head>
+
+<body>
+    <main>
+        <h1 id="obsidian-markdown-to-html-converter">Obsidian Markdown to HTML Converter</h1>
+<h2 id="how-it-looks-barebones">How It Looks (Barebones)</h2>
+<p><img src="Media/md_html_converter_barebones.png" class="embed-image" alt="Media/md_html_converter_barebones.png"></p>
+<h2 id="how-it-looks-obsidian-styling">How It Looks (Obsidian Styling)</h2>
+<p><img src="md_html_converter_obsidianstyle.png" class="embed-image" alt="md_html_converter_obsidianstyle.png"></p>
+<h2 id="inspiration">Inspiration</h2>
+<p>I needed to make a portfolio but I care so little about making one that I wanted it to be as streamlined as possible; I'd much rather be working on projects than dedicating time to a portfolio that hardly anyone will care to give worthwhile attention (though if you're the exception, I appreciate you). Anyways, I already takes notes in <a class="link-external" href="https://obsidian.md/">Obsidian</a>. I figured it would not be too difficult to automatically convert Obsidian markdown to HTML. I looked at some tools which already exist but they seemed too bloated and complex for what I wanted.</p>
+<p>After research, I realized that I could write the converter myself in python. Doing so would allow me to have full control over a minimal converter, and it would also serve as a project to add to my portfolio.</p>
+<p>The project was fairly straightforward. It was just a matter of writing methods for converting all of Obsidian's unique markdown handlings. This project was also my first time creating a package. I've made CLI tools before, but never as streamlined packages that can be easily installed with <code class="code-inline">pip install .</code> out of the github repo directory.</p>
+<p>What I have now is an incredibly easy tool which can convert directories or files to HTML with a simple, globally callable command:<br />
+<code class="code-inline">obsidian-md-html</code><br />
+^- There's no typo. It is that simple. There are additional options, but the command above will convert all markdown files in the current directory to HTML (specifically <code class="code-inline">.md.html</code>).</p>
+    </main>
+</body>
+
+</html>

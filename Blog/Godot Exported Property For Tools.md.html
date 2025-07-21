@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Godot Exported Property For Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./obsidian-style.css">
+</head>
+
+<body>
+    <main>
+        <p>In Godot 4.3, there are two ways to make a property. Here's an example within a tool that adds a streamlined inspector value to override all margins at once:<br />
+<img src="../Media/godot_property_example.webp" class="embed-image" alt="godot_property_example.webp"></p>
+<p>Here it is written code as well:</p>
+<pre><code class="language-gdscript code-block">
+```  
+ @tool    # If the tool is not working in Editor, try soft reloading tool script (Ctrl+Alt+R, by default)  
+                extends MarginContainer
+
+                # This class streamlines margin adjustments with a custom property  
+
+                const _MARGINS = [&quot;margin_bottom&quot;, &quot;margin_left&quot;, &quot;margin_right&quot;, &quot;margin_top&quot;]
+
+
+                # EXAMPLE 1 (requires a secondary variable in order to store the value)  
+                var _all_margins: int = 0  
+                @export  
+                var All_margins: int:  
+                    get():  
+                        return _all_margins  
+                    set(new_margin):  
+                        _all_margins = new_margin  
+                        for m in _MARGINS:  
+                            add_theme_constant_override(m, All_margins)
+
+
+                # EXAMPLE 2 (no secondary variable needed, but the value is discarded after &<button class="obsi-tag" data-tag="x27">#x27</button>;set&<button class="obsi-tag" data-tag="x27">#x27</button>; executes)  
+                @export  
+                var All_margins_2: int:  
+                    set(new_margin):  
+                        All_margins_2 = new_margin  
+                        for m in _MARGINS:  
+                            add_theme_constant_override(m, All_margins_2)
+
+```</code></pre>
+<p>1</p>
+    </main>
+</body>
+
+</html>

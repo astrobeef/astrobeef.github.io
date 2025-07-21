@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vapor Warehouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./obsidian-style.css">
+</head>
+
+<body>
+    <main>
+        <h1 id="vapor-warehouse-game-idea">Vapor Warehouse - Game Idea</h1>
+<p>I have been struggling to find a new project to work on. Not that I don't have ideas; quite the opposite. But all of the ideas in my mind compete for my attention based on my whims. Some days I want to follow my heart: work on a 3D, first-person, cooperative game like Lethal Company because I know I would enjoy it with my friends even before it's finished. Other days (even other moments of the same day) I want to create something more achievable. Something that either utilizes my current skills or gives me opportunity to test new skills.</p>
+<p>I've realized that I should just work on <strong>Vapor Warehouse</strong>. It's a simple project with a clear vision, aesthetic, and theme. Moreover, I've come to realize that I could create small programs and games within <strong>Vapor Warehouse</strong> to test my programming skills. It would fit perfectly into the premise of the game: recreating old vaporware technologies.</p>
+<p>These miscellaneous projects can be anything: shader demos written in Godot's version of GLSL; renders of 3D scenes; finished 2D artworks; small animations; heavily processed reference videos (my original idea for the game, which would show some 80s anime heavily filtered); simple VFX demos; ASCII games; pixel art games; calculators and other utility programs; and so many more possibilities.</p>
+<h2 id="mechanics">Mechanics</h2>
+<ul>
+<li>
+<p>Open boxes to get pseudo-random components (3D components with 2D icons)</p>
+</li>
+<li>
+<p>Drag components into inventory</p>
+</li>
+<li>
+<p>Sort &amp; categorize inventory (manually and automatically)</p>
+</li>
+<li>
+<p>Drag components into 3D viewports</p>
+</li>
+<li>
+<p>Build devices in a dedicated, central 3D viewport</p>
+</li>
+<li>
+<p>Boot up devices in a dedicated, right 2D viewport</p>
+<ul>
+<li>
+<p>Test devices (showcase a simple boot up simulation)</p>
+</li>
+<li>
+<p>Run devices (showcase one unique feature)</p>
+<ul>
+<li>
+<p>Shader showcase</p>
+</li>
+<li>
+<p>Processed media under fair-use</p>
+</li>
+<li>
+<p>2D art showcase</p>
+</li>
+<li>
+<p>3D art showcase</p>
+</li>
+<li>
+<p>Small games (ASCII, ANSI, pixel)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Sell parts and devices to meet company quota</p>
+</li>
+<li>
+<p>Receive messages from NPCs in a right side window</p>
+</li>
+<li>
+<p>Manipulate adjustable windows (2D &amp; 3D)</p>
+</li>
+<li>
+<p>Work under a daily time constraint which defines a clear start and end of day. Total of 14 days.</p>
+</li>
+</ul>
+<h2 id="my-skills-needed-for-the-mechanics">My Skills Needed For the Mechanics</h2>
+<ul>
+<li>
+<p><strong>Programming</strong></p>
+<ul>
+<li>
+<p>Data Structures &amp; Algorithms (for inventory &amp; sorting)</p>
+</li>
+<li>
+<p>Custom Input Mapping</p>
+</li>
+<li>
+<p>Entity-Component-System (ECS)</p>
+</li>
+<li>
+<p>Modular Coding Practices</p>
+</li>
+<li>
+<p>Drag &amp; Drop implementation</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>User Interface (UI) &amp; User Experience (UX)</strong></p>
+<ul>
+<li>
+<p>Godot Control Nodes</p>
+</li>
+<li>
+<p>Godot Responsiveness</p>
+</li>
+<li>
+<p>Godot Custom UI Elements</p>
+</li>
+<li>
+<p>Visual/auditory feedback for user actions</p>
+</li>
+<li>
+<p>Resizable panels</p>
+</li>
+<li>
+<p>Managing multiple sub viewports</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>3D &amp; 2D</strong></p>
+<ul>
+<li>
+<p>3D hard surface modeling</p>
+</li>
+<li>
+<p>3D PSx texturing</p>
+</li>
+<li>
+<p>2D icon design</p>
+</li>
+<li>
+<p>2D sprite animation</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Graphics Programming</strong></p>
+<ul>
+<li>
+<p>Godot Shader Language</p>
+</li>
+<li>
+<p>GLSL Basics</p>
+</li>
+<li>
+<p>Post-Processing effects in Godot</p>
+</li>
+<li>
+<p>Toon shader (rework)</p>
+</li>
+<li>
+<p>2D VFX</p>
+</li>
+<li>
+<p>3D VFX</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Gameplay Systems</strong></p>
+<ul>
+<li>
+<p>Inventory Systems</p>
+<ul>
+<li>
+<p>Data Management</p>
+</li>
+<li>
+<p>Sorting &amp; Filtering Algorithms</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Randomization &amp; Loot Systems</p>
+<ul>
+<li>
+<p>Pseudo-randomness</p>
+</li>
+<li>
+<p>Probability &amp; Rarity tiers</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Building System</p>
+<ul>
+<li>
+<p>Defining a base focus (chassis)</p>
+</li>
+<li>
+<p>Snap to isometric grid</p>
+</li>
+<li>
+<p>Floating components</p>
+</li>
+<li>
+<p>Component interaction logic (how parts can/cannot connect with each other)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Economy Systems</p>
+<ul>
+<li>Handling sale value of components in isolation versus components in a functional device</li>
+</ul>
+</li>
+<li>
+<p>Time Management</p>
+<ul>
+<li>
+<p>Game clock</p>
+</li>
+<li>
+<p>Event Scheduling</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>NPC Interaction</strong></p>
+<ul>
+<li>
+<p>Message handling in UI</p>
+</li>
+<li>
+<p>Reactive dialogue system</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Mini-games</strong></p>
+<ul>
+<li>
+<p>Retro Game Design</p>
+<ul>
+<li>
+<p>ASCII/ANSI Graphics</p>
+</li>
+<li>
+<p>Pixel Art Graphics</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Game-within-a-game architecture</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Media Processing</strong></p>
+<ul>
+<li>
+<p>Audio/Video Playback with modular effects</p>
+</li>
+<li>
+<p>Fair Use understanding</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Audio</strong></p>
+<ul>
+<li>
+<p>Event triggers</p>
+</li>
+<li>
+<p>90s era audio design</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Debugging</strong></p>
+<ul>
+<li>
+<p>Standard error handling practices</p>
+</li>
+<li>
+<p>Logger system integrated into debug build</p>
+</li>
+<li>
+<p>Unit testing</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>2024 astrobeef</p>
+    </main>
+</body>
+
+</html>

@@ -1,17 +1,17 @@
 /* ==== Obsidian-like Dark Theme CSS ==== */
 :root {
-  --bg-main: #1e1e2e;
+  --bg-main: #18191d;
   --bg-secondary: #181825;
   --bg-callout-note: #313244;
   --bg-callout-tip: #23342b;
   --bg-callout-warning: #3a2c26;
-  --color-text: #cdd6f4;
+  --color-text: #e0e6f7;
   --color-muted: #a6adc8;
   --color-accent: #89b4fa;
-  --color-link: #89b4fa;
-  --color-heading: #89b4fa;
-  --color-h3: #b4befe;
-  --color-h4: #fab387;
+  --color-link: #e9b26a;
+  --color-heading: #ffffff;
+  --color-h3: #d4d7ee;
+  --color-h4: #e9cebe;
   --border-radius: 8px;
   --table-border: #585b70;
   --inline-code-bg: #292c3c;
@@ -34,23 +34,50 @@ body {
   padding: 2rem 1rem 4rem 1rem;
 }
 
+/* === Headings === */
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
 }
-h3 { color: var(--color-h3); }
+h1{
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+h2{
+  font-size: 2.0rem;
+  font-weight: 800;
+}
+h3 {
+  color: var(--color-h3);
+}
 h4, h5, h6 { color: var(--color-h4); }
+
+/* === Links === */
 
 a, a:visited {
   color: var(--color-link);
+  text-decoration: underline double;
+}
+
+a.link-internal{
   text-decoration: underline;
 }
+
 a:hover {
   text-decoration: underline wavy;
-  color: #a6e3a1;
+  color: #e67857;
+}
+
+a.link-wikilink-noref {
+  text-decoration: underline dashed;
+}
+a.link-wikilink-noref:hover {
+  color: var(--color-muted);
+  text-decoration: none;
 }
 
 hr {

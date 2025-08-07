@@ -1,0 +1,298 @@
+/* ==== Obsidian-like Dark Theme CSS ==== */
+:root {
+  --bg-main: #18191d;
+  --bg-secondary: #181825;
+  --bg-callout-note: #313244;
+  --bg-callout-tip: #23342b;
+  --bg-callout-warning: #3a2c26;
+  --color-text: #e0e6f7;
+  --color-muted: #a6adc8;
+  --color-accent: #89b4fa;
+  --color-link: #e9b26a;
+  --color-heading: #ffffff;
+  --color-h3: #d4d7ee;
+  --color-h4: #e9cebe;
+  --border-radius: 8px;
+  --table-border: #585b70;
+  --inline-code-bg: #292c3c;
+  --inline-code-color: #f5c2e7;
+  --code-bg: #181825;
+  --callout-title-size: 1em;
+}
+
+html, body {
+  background: var(--bg-main);
+  color: var(--color-text);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem 1rem;
+}
+
+/* === Headings === */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+h1{
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+h2{
+  font-size: 2.0rem;
+  font-weight: 800;
+}
+h3 {
+  color: var(--color-h3);
+}
+h4, h5, h6 { color: var(--color-h4); }
+
+/* === Links === */
+
+a, a:visited {
+  color: var(--color-link);
+  text-decoration: underline double;
+}
+
+a.link-internal{
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline wavy;
+  color: #e67857;
+}
+
+a.link-wikilink-noref {
+  text-decoration: underline dashed;
+}
+a.link-wikilink-noref:hover {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #313244;
+  margin: 2em 0;
+}
+
+blockquote {
+  background: #232634;
+  border-left: 4px solid #89b4fa;
+  padding: 1em 1.5em;
+  margin: 1.2em 0;
+  border-radius: 0 8px 8px 0;
+  color: #a6adc8;
+}
+
+/* ==== Callouts ==== */
+.callout {
+  border-left: 4px solid var(--color-accent);
+  background: var(--bg-callout-note);
+  border-radius: var(--border-radius);
+  margin: 1.5em 0;
+  padding: 1em 1em 1em 1.5em;
+  box-shadow: 0 2px 8px 0 #0002;
+}
+.callout[data-callout-type="tip"] {
+  background: var(--bg-callout-tip);
+  border-left-color: #40a02b;
+}
+.callout[data-callout-type="warning"] {
+  background: var(--bg-callout-warning);
+  border-left-color: #fab387;
+}
+.callout[data-callout-type="info"] {
+  background: #1e293b;
+  border-left-color: #89dceb;
+}
+.callout-title {
+  font-weight: bold;
+  font-size: var(--callout-title-size);
+  margin-bottom: 0.6em;
+  color: var(--color-accent);
+}
+.callout-content {
+  color: var(--color-text);
+}
+
+/* ==== Code & Syntax ==== */
+code, pre {
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Fira Code', 'Menlo', monospace;
+  font-size: 0.96em;
+}
+code {
+  background: var(--inline-code-bg);
+  color: var(--inline-code-color);
+  border-radius: 5px;
+  padding: 0.2em 0.4em;
+  font-size: 0.97em;
+}
+pre {
+  background: var(--code-bg);
+  color: var(--color-accent);
+  border-radius: 7px;
+  padding: 1em;
+  margin: 1em 0;
+  overflow-x: auto;
+  font-size: 1em;
+}
+pre code {
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+
+/* ==== Checklists ==== */
+input[type="checkbox"] {
+  accent-color: var(--color-accent);
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: middle;
+  margin-right: 0.6em;
+}
+li.task-list-item {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* ==== Tags ==== */
+.obsi-tag {
+  background: #45475a;
+  color: var(--color-accent);
+  border-radius: 4px;
+  padding: 0.15em 0.6em;
+  margin: 0 0.15em;
+  font-size: 0.92em;
+  display: inline-block;
+  cursor: pointer;
+}
+.obsi-tag:hover {
+  background: #89b4fa;
+  color: #1e1e2e;
+}
+
+/* ==== Tables ==== */
+table {
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  width: 100%;
+}
+th, td {
+  border: 1px solid var(--table-border);
+  padding: 0.6em 1em;
+}
+th {
+  background: #313244;
+  color: var(--color-accent);
+}
+tr:nth-child(even) td {
+  background: #232634;
+}
+tr:nth-child(odd) td {
+  background: #292c3c;
+}
+
+/* ==== Math ==== */
+.math-block {
+  background: #11111b;
+  color: #a6e3a1;
+  border-radius: 4px;
+  padding: 0.8em 1.5em;
+  margin: 1.3em 0;
+  font-family: 'JetBrains Mono', 'Fira Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  overflow-x: auto;
+}
+.math-inline {
+  background: #232634;
+  color: #a6e3a1;
+  border-radius: 2px;
+  padding: 0.1em 0.3em;
+  font-family: 'JetBrains Mono', 'Fira Mono', monospace;
+  font-size: 1em;
+}
+
+/* ==== Footnotes ==== */
+.footnote-ref, .footnote-backref {
+  color: var(--color-muted);
+  font-size: 0.9em;
+  text-decoration: underline dotted;
+}
+.footnotes {
+  font-size: 0.93em;
+  color: var(--color-muted);
+  border-top: 1px solid #585b70;
+  margin-top: 2em;
+}
+.footnotes ol {
+  margin-left: 1.5em;
+}
+.footnotes li {
+  margin-bottom: 0.7em;
+}
+.footnotes a {
+  color: var(--color-link);
+}
+
+/* ==== PDF/Audio/Video Embeds ==== */
+.embed-audio, .embed-video, .embed-pdf {
+  display: block;
+  margin: 1em 0;
+  width: 100%;
+  max-width: 100%;
+  background: var(--bg-secondary);
+  border-radius: 5px;
+}
+.embed-pdf {
+  min-height: 400px;
+}
+.embed-video {
+  min-height: 240px;
+}
+.embed-audio {
+  height: 45px;
+}
+
+/* ==== Highlighting ==== */
+mark {
+  background: #ffe59e;
+  color: #181825;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+
+/* ==== Strikethrough ==== */
+del, .strikethrough {
+  text-decoration: line-through;
+  color: #a6adc8;
+}
+
+/* ==== Misc ==== */
+sup {
+  font-size: 0.8em;
+  vertical-align: super;
+}
+.sub {
+  font-size: 0.8em;
+  vertical-align: sub;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}

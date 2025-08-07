@@ -1,3 +1,4 @@
+/* --- obsidian.css --- */
 /* ==== Obsidian-like Dark Theme CSS ==== */
 :root {
   --bg-main: #18191d;
@@ -296,3 +297,60 @@ img {
   height: auto;
   border-radius: 4px;
 }
+
+
+/* --- project_carousel.css --- */
+/* --- layout --- */
+
+
+.sidebar {
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    .sidebar {
+        opacity: 0;
+        transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1);
+        display:flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 20%;
+        /* adjust width as needed */
+        height: 100vh;
+        overflow: hidden;
+        background: #111;
+    }
+    .sidebar.carousel-loaded {
+    opacity: 1;
+    }
+
+    /* --- vertical tape of images --- */
+    .track {
+        display: flex;
+        flex-direction: column;
+        animation: scroll 25s linear infinite;
+    }
+
+    .track img {
+        width: 100%;
+        height: auto;
+        flex: 0 0 auto;
+        object-fit: cover;
+        border-bottom: 2px solid #000;
+    }
+
+    /* --- motion --- */
+    @keyframes scroll {
+        from {
+            transform: translateY(0)
+        }
+
+        to {
+            transform: translateY(-50%)
+        }
+
+        /* moves upward through one full set */
+    }
+}
+

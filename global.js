@@ -1,4 +1,4 @@
-import { injectCarousel, doInjectCarousel } from "./project_carousel.js"
+import { doInjectCarousel, injectCarousel } from "./project_carousel.js"
 
 document.addEventListener('DOMContentLoaded', () => {
     if (doInjectCarousel())

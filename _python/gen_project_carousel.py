@@ -21,6 +21,14 @@ ITEMS = [
         "src"       : Path("./Media/Moes-diner-duel.png"),
         "href"      : Path("./Projects/Moe's Diner Duel.md.html")
      },
+    {
+        "src"       : Path("./Media/CTLA-chatbot-mobile-screenshot.png"),
+        "href"      : Path("./Projects/CTLA Chatbot.md.html")
+     },
+    {
+        "src"       : Path("./Media/CTLA-website-desktop-screenshot.png"),
+        "href"      : Path("./Projects/CTLA Website.md.html")
+     },
 ]
 
 def _gen_alt_text(item) -> str:
